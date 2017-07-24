@@ -10,7 +10,9 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'ImageGalleryController@index');
+Route::post('/', 'ImageGalleryController@upload');
+Route::delete('/{id}', 'ImageGalleryController@destroy');
+// Route::get('/', function() {
+//   return view('welcome');
+// });
